@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceB", "ServiceB\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPolly", "DemoPolly\DemoPolly.csproj", "{AD710AD5-525B-46E3-AD23-64B208F995A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{6F3FA2D8-CF5C-412C-9BA6-975F6DC42991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AD710AD5-525B-46E3-AD23-64B208F995A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD710AD5-525B-46E3-AD23-64B208F995A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD710AD5-525B-46E3-AD23-64B208F995A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3FA2D8-CF5C-412C-9BA6-975F6DC42991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3FA2D8-CF5C-412C-9BA6-975F6DC42991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3FA2D8-CF5C-412C-9BA6-975F6DC42991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3FA2D8-CF5C-412C-9BA6-975F6DC42991}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

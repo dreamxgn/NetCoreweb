@@ -23,6 +23,14 @@ namespace ServiceB.Controllers
             return "返回所有产品信息";
         }
 
+        [HttpGet]
+        [Route("registerUser")]
+        public string registerUser()
+        {
+            
+            return "error";
+        }
+
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)

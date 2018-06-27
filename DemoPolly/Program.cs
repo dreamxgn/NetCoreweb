@@ -12,7 +12,14 @@ namespace DemoPolly
     {
         static void Main(string[] args)
         {
-            Retry();
+            try
+            {
+                WaitRetry();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("出错了");
+            }
             Console.ReadKey();
         }
 
@@ -27,10 +34,29 @@ namespace DemoPolly
 
         public static void Retry()
         {
-            Policy.Handle<Exception>().Retry(3,(ex,count)=> {
+            Policy.Handle<Exception>().Retry(1,(ex,count)=> {
                 Console.WriteLine("Retry: {0}", count);
             }).Execute(() => {
-                Console.WriteLine("aaaaaaaaaaaaaaaaa");
+                Console.WriteLine("获取网络数据");
+                HttpClient client = new HttpClient();
+                string s1 = client.GetStringAsync("http://localhost:9090").Result;
+            });
+        }
+
+        /// <summary>
+        /// 等待多少秒重试
+        /// </summary>
+        public static void WaitRetry()
+        {
+            Policy.Handle<Exception>().WaitAndRetry(new[] {
+                TimeSpan.FromSeconds(1),
+                TimeSpan.FromSeconds(2),
+                TimeSpan.FromSeconds(3)
+            },(ex,tp)=> {
+                Console.WriteLine("等待: {0} 秒重试", tp.Seconds);
+            }).Execute(() =>
+            {
+                Console.WriteLine("获取网络数据");
                 HttpClient client = new HttpClient();
                 string s1 = client.GetStringAsync("http://localhost:9090").Result;
             });
