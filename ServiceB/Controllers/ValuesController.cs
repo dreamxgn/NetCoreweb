@@ -56,6 +56,11 @@ namespace ServiceB.Controllers
         {
         }
 
+
+        /// <summary>
+        /// Service健康检查
+        /// </summary>
+        /// <returns></returns>
         [Route("health")]
         public IActionResult Health()
         {
