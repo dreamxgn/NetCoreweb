@@ -55,5 +55,11 @@ namespace ServiceB.Controllers
         public void Delete(int id)
         {
         }
+
+        [Route("health")]
+        public IActionResult Health()
+        {
+            return Ok();
+        }
     }
 }

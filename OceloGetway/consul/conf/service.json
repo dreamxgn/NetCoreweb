@@ -1,0 +1,81 @@
+{
+
+  "encrypt": "7TnJPB4lKtjEcCWWjN6jSA==",
+
+  "services": [
+
+    {
+
+      "id": "Service1",
+
+      "name": "Service1",
+
+      "tags": [ "Service1" ],
+
+      "address": "localhost",
+
+      "port": 5001,
+
+      "checks": [
+
+        {
+
+          "id": "Service1_Check",
+
+          "name": "Service1_Check",
+
+          "http": "http://localhost:5001/api/values/health",
+
+          "interval": "10s",
+
+          "tls_skip_verify": false,
+
+          "method": "GET",
+
+          "timeout": "1s"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "id": "Service2",
+
+      "name": "Service2",
+
+      "tags": [ "Service2" ],
+
+      "address": "localhost",
+
+      "port": 5002,
+
+      "checks": [
+
+        {
+
+          "id": "Service2_Check",
+
+          "name": "Service2_Check",
+
+          "http": "http://localhost:5002/api/values/health",
+
+          "interval": "10s",
+
+          "tls_skip_verify": false,
+
+          "method": "GET",
+
+          "timeout": "1s"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}

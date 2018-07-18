@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="consul\data\" />
+    <Folder Include="consul\dist\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
