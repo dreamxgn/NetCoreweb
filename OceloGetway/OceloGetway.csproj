@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="consul\ocelot_consul配置.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="consul\data\" />
     <Folder Include="consul\dist\" />
     <Folder Include="wwwroot\" />
@@ -17,6 +21,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="consul\ocelot_consul配置.json" />
   </ItemGroup>
 
   <ItemGroup>
