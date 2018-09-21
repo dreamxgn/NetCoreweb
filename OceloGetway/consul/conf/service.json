@@ -8,7 +8,7 @@
 
       "id": "Service1",
 
-      "name": "Service1",
+      "name": "产品报表服务",
 
       "tags": [ "Service1" ],
 
@@ -44,7 +44,7 @@
 
       "id": "Service2",
 
-      "name": "Service2",
+      "name": "用户授权服务",
 
       "tags": [ "Service2" ],
 
