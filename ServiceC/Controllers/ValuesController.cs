@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ServiceA.Controllers
+namespace ServiceC.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
@@ -13,7 +14,7 @@ namespace ServiceA.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1 from webapi A", "value2 from webapi A" };
+            return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
@@ -41,8 +42,25 @@ namespace ServiceA.Controllers
         {
         }
 
+        [HttpGet]
+        [Route("getdata")]
+        public string getdata()
+        {
+            return "getdata......";
+        }
+
+        [HttpGet]
+        [Route("waring")]
+        public void SendWaring()
+        {
+            string file = "d:\\error.log";
+
+            System.IO.File.AppendAllText(file, String.Format("Error: {0}\r\n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+
+        }
+
         /// <summary>
-        /// 健康检查
+        /// Service健康检查
         /// </summary>
         /// <returns></returns>
         [Route("health")]
