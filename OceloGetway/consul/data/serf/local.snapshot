@@ -10,3 +10,7 @@ alive: n1 172.16.3.185:8301
 event-clock: 5
 alive: n1 172.16.3.185:8301
 event-clock: 6
+alive: n1 172.16.3.248:8301
+event-clock: 7
+alive: n1 172.16.3.248:8301
+event-clock: 8

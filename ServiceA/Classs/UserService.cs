@@ -59,5 +59,20 @@ namespace ServiceA.Classs
             return users.Where(a => a.Token == token).FirstOrDefault();
         }
 
+        public bool AddOrder(string token,string order)
+        {
+            User user = users.Where(a => a.Token == token).FirstOrDefault();
+            if (user != null)
+            {
+                if (user.Orders == null)
+                {
+                    user.Orders = new List<string>();
+                }
+                user.Orders.Add(order);
+                return true;
+            }
+            return false;
+        }
+
     }
 }

@@ -5,14 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ServiceB.classs;
 
-namespace ServiceB.Controllers
+namespace ServiceC.Controllers
 {
-    [Route("api/[controller]")]
     public class ProductController : Controller
     {
         [Route("getproducts")]
         [HttpGet]
-        [Login]
         public List<ProductInfo> GetProducts()
         {
             List<ProductInfo> list = new List<ProductInfo>();

@@ -20,12 +20,14 @@ namespace ServiceA.Controllers
 
 
         [Route("login")]
+        [HttpPost]
         public string Login(string user, string pwd)
         {
             return userService.Login(user, pwd);
         }
 
         [Route("logout")]
+        [HttpPost]
         public string Logout(string token)
         {
             userService.Logout(token);
@@ -33,6 +35,7 @@ namespace ServiceA.Controllers
         }
 
         [Route("verify")]
+        [HttpPost]
         public ActionResult Verify(string token)
         {
             User user = userService.GetUserByToken(token);
